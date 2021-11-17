@@ -394,3 +394,164 @@
    }
 }
 // banner end
+
+
+// partners start
+.partners {
+   &__content {
+
+   }
+   &__title {
+      font-size: 40px;
+      line-height: 50px;
+      font-weight: 600;
+      text-shadow: 0px 4px 20px rgba(49, 119, 255, 0.7), 0px 0px 70px rgba(49, 119, 255, 0.5);
+      margin-bottom: 71px;
+      max-width: 300px;
+   }
+   &__card {
+      display: flex;
+      justify-content: space-between;
+   }
+   &__card-item {
+      padding: 34px 51px 35px 51px;
+      background: linear-gradient(0deg, #0E1D33, #0E1D33), #0E1D33;
+      box-shadow: 36px 24px 60px #0E1D32, -36px -24px 60px rgba(58, 58, 58, 0.25);
+      border-radius: 13px;
+      text-align: center;
+   }
+   &__card-img {
+      display: flex;
+      justify-content: center;
+      height: 70px;
+   }
+   &__card-img img {
+      height: max-content;
+   }
+   &__card-border{
+      margin-bottom: 23px;
+   }
+   &__card-title {
+      font-size: 18px;
+      font-weight: 750;
+   }
+}
+// partners end
+
+// affiliate start
+.affiliate {
+   &__content {
+
+   }
+   &__title {
+      margin: 0 auto;
+      line-height: 50px;
+      text-align: center;
+      max-width: 850px;
+      font-size: 40px;
+      font-weight: 600;
+      margin-bottom: 69px;
+      text-shadow: 0px 4px 20px rgba(49, 119, 255, 0.7), 0px 0px 70px rgba(49, 119, 255, 0.5);
+   }
+   &__description {
+      font-weight: 750;
+      font-size: 19px;
+      margin-bottom: 69px;
+
+   }
+   &__button {
+      padding: 28px 69px;
+   }
+   .container {
+      text-align: center;
+      padding: 60px 0px 134px 0px;
+   }
+}
+// affiliate end
+
+// footer start
+.footer {
+   position: relative;
+   &__absolute {
+      position: absolute;
+      right: 0;
+      left: 0;
+      bottom: 62px;
+      margin: 0 auto;
+      width: max-content;
+      z-index: 1;
+   }
+   .container  {
+      z-index: 2;
+      position: relative;
+   }
+   &__content {
+
+   }
+   &__main {
+      padding: 33px 0px;
+      border-radius: 0px 0px 13px 13px;
+      box-shadow: inset 36px 24px 60px #0E1D32;
+      background: linear-gradient(0deg, #0D203C, #0D203C), #0E1D33;
+   }
+   &__logo {
+      margin-bottom: 47px;
+   }
+   &__contact {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+   }
+   &__text-item {
+      font-weight: 450;
+      letter-spacing: 0.02em;
+   }
+   &__text-item:not(:last-child) {
+      margin-bottom: 24px;
+   }
+   &__email {
+      border-left: 2px solid #95F400;
+      border-right: 2px solid #95F400;
+      padding: 4px 115px;
+   }
+   &__email .icon-mail {
+      margin-right: 11px;
+      font-size: 38px;
+      transition: 0.3s;
+   }
+   &__email .icon-mail:hover {
+      transform: scale(1.2);
+   }
+   &__email-link {
+      display: flex;
+      align-items: center;
+   }
+   &__email-text {
+      font-weight: 450;
+      font-size: 18px;
+      letter-spacing: 0.02em;
+   }
+   &__social {
+      display: flex;
+   }
+   &__social-item {
+      font-size: 25px;
+      transition: 0.3s;
+   }
+   &__social-item:hover {
+      transform: scale(1.2);
+   }
+   &__social-item:not(:last-child) {
+      margin-right: 31px;
+   }
+   &__second {
+      background-color: #0B1D37;
+   }
+   &__second-text {
+      display: flex;
+      justify-content: center;
+      padding: 18px 0px;
+      color: #314767;
+   }
+}
+// footer end
