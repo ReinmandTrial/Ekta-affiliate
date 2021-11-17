@@ -9,6 +9,7 @@
     background: $gradientGreen;
     // background-: #000;
     overflow: hidden;
+    transition: 0.3s;
     &:hover {
         background: $white;
         color: #95f400;
@@ -22,10 +23,14 @@
         transform-origin: 0 0;
         transform: skewX(30deg) translateX(-10%);
         font-weight: 700;
-        font-size: 18px;
-        line-height: 22px;
+        font-size: 20px;
+        line-height: 25px;
         position: relative;
         z-index: 10;
+        @media (max-width: 575.98px) {
+            font-size: 18px;
+            line-height: 22px;
+        }
     }
     &__bg {
         position: absolute;
