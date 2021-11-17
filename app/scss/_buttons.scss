@@ -1,27 +1,48 @@
-.btn {
+.btn-primary {
+    border-radius: 7px 20px 7px 20px;
+    color: $white;
+    transform-origin: 0 100%;
+    transform: skewX(-30deg);
+    padding: 16px 37px;
+    display: inline-block;
+    // background-image: url("../images/btn-patterns.png"), $gradientGreen;
+    background: $gradientGreen;
+    // background-: #000;
+    overflow: hidden;
     &:hover {
-    }
-    &:focus {
-    }
-    &:active {
-    }
-    &-primary {
-        &:hover {
+        background: $white;
+        color: #95f400;
+        box-shadow: 0 0 34px #95f400;
+        .btn-primary__bg {
+            display: none;
         }
     }
-    &-secondary {
-        &:hover {
-        }
+    &__text {
+        display: inline-block;
+        transform-origin: 0 0;
+        transform: skewX(30deg) translateX(-10%);
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 22px;
+        position: relative;
+        z-index: 10;
     }
-    &-contour {
-        &:hover {
-        }
-    }
-    &-filter {
-        &:hover {
+    &__bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
     }
 }
+
 input,
 textarea {
     border: unset;

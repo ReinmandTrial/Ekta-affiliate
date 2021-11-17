@@ -1,12 +1,18 @@
 html,
 body {
 	height: 100%;
-	// font-family: "";
-	font-weight: normal;
+	font-family: "Avenir Next Cyr";
 	font-style: normal;
-	// font-size: 17px;
-	// color: $text1;
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 27px;
+	color: $white;
 	overflow-x: hidden;
+	background: linear-gradient(180deg, #0f1825 0%, #0a2a59 100%);
+	@media (max-width: 575.98px) {
+		font-size: 12px;
+		line-height: 15px;
+	}
 }
 textarea {
 	resize: none;
@@ -25,9 +31,9 @@ textarea {
 	flex: 0 0 auto;
 }
 .container {
-	// max-width: px;
+	max-width: 1220px;
 	margin: 0 auto;
-	// padding: 0px 15px;
+	padding: 0px 25px;
 	height: 100%;
 }
 input,
@@ -35,22 +41,7 @@ textarea {
 	appearance: none;
 	outline: none;
 }
-
-.breadcrumbs {
-}
-
-.d-flex {
-	display: flex !important;
-}
-
 //Ввод данных конец
-.burger {
-}
-
-.off {
-	display: none !important;
-}
-
 .checkbox {
 	position: relative;
 }
