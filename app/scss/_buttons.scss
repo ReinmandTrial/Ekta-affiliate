@@ -21,7 +21,7 @@
     &__text {
         display: inline-block;
         transform-origin: 0 0;
-        transform: skewX(30deg) translateX(-10%);
+        transform: skewX(30deg) translateX(-5%);
         font-weight: 700;
         font-size: 20px;
         line-height: 25px;
@@ -33,6 +33,7 @@
         }
     }
     &__bg {
+        pointer-events: none;
         position: absolute;
         top: 0;
         left: 0;
@@ -47,16 +48,9 @@
         }
     }
 }
-
-input,
-textarea {
-    border: unset;
-    background: transparent;
-    &::placeholder {
-    }
-}
-button {
-    border: unset;
-    padding: unset;
-    cursor: pointer;
+.btn-primary--center {
+    transform: skewX(-30deg) translateX(-8%);
+    width: max-content;
+    margin: 0 auto;
+    display: block;
 }

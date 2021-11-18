@@ -32,4 +32,27 @@ $(document).ready(function () {
       $(this).closest(".js-select").removeClass('open');
       // $('.js-select').removeClass('open'); 
    });
+
+
+   // popup
+   $('.btn-popup-login').on('click', function () {
+      $('.popup-login').fadeIn();
+   });
+   $('.btn-popup-forgot-pass').on('click', function () {
+      $('.popup').fadeOut();
+      $('.popup-forgot-pass').fadeIn();
+   });
+
+   //нажатие вне body
+   $(document).on('click', function (e) {
+      if (!$(e.target).closest(".popup__content").length && !$(e.target).closest(".btn-popup").length) {
+         $('.popup').fadeOut();
+      }
+      e.stopPropagation();
+   });
+   $('.popup-close').on('click', function () {
+      $('.popup').fadeOut();
+   })
+   //нажатие вне body
+   //popup end
 });

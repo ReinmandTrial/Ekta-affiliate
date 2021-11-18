@@ -1,3 +1,116 @@
-// popup template
+// popup
+.popup {
+   display: none;
+   position: fixed;
+   top: 0;
+   left: 0;
+   z-index: 99999;
+   width: 100%;
+   height: 100vh;
+   &__body {
+      background: rgba(0, 0, 0, 0.6);
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+   }
+   &__content {
+      margin: 25px;
+      width: 100%;
+      max-width: 420px;
+      background: linear-gradient(180deg, #0f1825 0%, #102b54 100%);
+      border: 3px solid #95f400;
+      border-radius: 13px;
+      padding: 60px 55px 40px;
+      box-shadow: 0 0 44px rgba(149, 244, 0, 0.4);
+      position: relative;
+      @media (max-width: 575.98px) {
+         padding-top: 65px;
+         padding-left: 20px;
+         padding-right: 20px;
+      }
+   }
+   &__title {
+      font-weight: 600;
+      font-size: 30px;
+      line-height: 50px;
+      text-align: center;
+      margin-bottom: 30px;
+      text-shadow: 0px 4px 20px rgba(49, 119, 255, 0.7), 0px 0px 70px rgba(49, 119, 255, 0.5);
+   }
+   .popup-close {
+      font-size: 21px;
+      position: absolute;
+      top: 30px;
+      right: 30px;
+   }
+}
+// popup end
 
+// popup login start
+.popup-login {
+   // display: block;
 
+   &__title {
+      cursor: pointer;
+      font-size: 30px;
+      line-height: 50px;
+   }
+   &__input-container {
+      margin-bottom: 10px;
+   }
+
+   &__forgot-pass {
+      color: $white;
+      display: block;
+      font-weight: 600;
+      text-decoration-line: underline;
+      width: max-content;
+      margin-left: auto;
+      margin-bottom: 50px;
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 17px;
+   }
+
+   &__btn {
+      display: block;
+      padding: 11px 53px;
+   }
+
+   &__help {
+      margin-top: 10px;
+      text-align: center;
+      font-size: 16px;
+      @media (max-width: 575.98px) {
+         margin-top: 20px;
+      }
+   }
+
+   &__link {
+      text-decoration-line: underline;
+      color: #95f400;
+   }
+}
+// popup login end
+
+// popup forgot pass
+.popup-forgot-pass {
+   .popup__content {
+      padding-left: 40px;
+      padding-right: 40px;
+   }
+   &__title {
+      cursor: pointer;
+      font-size: 30px;
+      line-height: 50px;
+   }
+   &__input-container {
+      margin-bottom: 60px;
+   }
+   &__btn {
+      padding: 11px 40px;
+   }
+}
+// popup forgot pass end
