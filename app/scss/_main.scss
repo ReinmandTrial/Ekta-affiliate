@@ -293,6 +293,7 @@
 		}
 	}
 	&-head {
+		cursor: pointer;
 	}
 
 	&-body {
@@ -591,7 +592,7 @@
 		@media (max-width: 767.98px) {
 			transform: translateX(50%);
 			position: absolute;
-			bottom: 10px;
+			bottom: -25px;
 			right: 25%;
 		}
 	}
@@ -736,7 +737,7 @@
 		top: 37%;
 		left: 50%;
 		z-index: 50;
-		animation: 1.5s ease-in infinite coin;
+		animation: 2s ease-in infinite coin;
 		@media (max-width: 575.98px) {
 			width: 110px;
 			height: 110px;
@@ -762,15 +763,16 @@
 }
 @keyframes coin {
 	0% {
-		transform: translate(-50%, -50%);
+		// transform: translate(-50%, -50%);
 		animation-timing-function: ease-out;
 	}
 	50% {
-		transform: translate(-50%, -90%);
+		// transform: translate(-50%, -90%);
+		top: 25%;
 		animation-timing-function: ease-in;
 	}
 	100% {
-		transform: translate(-50%, -50%);
+		// transform: translate(-50%, -50%);
 	}
 }
 // block model end
@@ -1068,8 +1070,8 @@
 		z-index: 10;
 		@media (max-width: 575.98px) {
 			font-weight: 700;
-			font-size: 18px;
-			line-height: 22px;
+			font-size: 16px;
+			line-height: 20px;
 		}
 	}
 
@@ -1206,7 +1208,7 @@
 	}
 	&__head-title {
 		font-size: 18px;
-		font-weight: 750px;
+		font-weight: 700;
 		padding-right: 14px;
 		@media (max-width: 768px) {
 			font-size: 14px;
@@ -1216,6 +1218,7 @@
 	&__head-icon {
 		width: 30px;
 		height: 30px;
+		cursor: pointer;
 		flex: none;
 	}
 	&__head-icon img {
@@ -1232,6 +1235,7 @@
 		padding: 25px 178px;
 		font-size: 16px;
 		line-height: 27px;
+		display: none;
 		font-weight: 450;
 		@media (max-width: 992px) {
 			padding: 20px 15px;
@@ -1243,15 +1247,20 @@
 	}
 	&__bg {
 		position: absolute;
-		transform: translate(-50%, -50%);
-		top: 50%;
-		left: 50%;
+		// transform: translate(-50%, -50%);
+		top: 60px;
+		left: 0;
+		right: 0;
 		width: 100%;
+		height: 900px;
 		@extend %imgCover;
 		@media (max-width: 575.98px) {
-			margin-left: -50px;
-			margin-right: -50px;
-			width: 850px;
+			// margin-left: -50px;
+			// margin-right: -50px;
+			// width: 850px;
+			width: 100%;
+			height: 620px;
+			top: 300px;
 		}
 	}
 }
@@ -1295,7 +1304,7 @@
 		}
 	}
 	&__button {
-		padding: 28px 69px;
+		padding: 22px 54px;
 		@media (max-width: 768px) {
 			padding: 21px 52px;
 		}
@@ -1397,7 +1406,7 @@
 	}
 
 	&__text-item:not(:last-child) {
-		margin-bottom: 24px;
+		margin-bottom: 15px;
 		@media (max-width: 768px) {
 			margin-bottom: 17px;
 		}
@@ -1417,7 +1426,7 @@
 
 	&__email .icon-mail {
 		margin-right: 11px;
-		font-size: 38px;
+		font-size: 24px;
 		transition: 0.3s;
 		@media (max-width: 992px) {
 			font-size: 16px;
@@ -1530,8 +1539,7 @@
 			border-bottom: 1px solid #fff;
 		}
 		.header__lang-body {
-			padding: 20px 0px;
-			margin-top: 24px;
+			padding: 10px 0px;
 			width: 100%;
 			max-height: 335px;
 			overflow-y: auto;
@@ -1540,7 +1548,7 @@
 				36px 24px 60px #0e1d32, -36px -24px 60px rgba(98, 98, 98, 0.25);
 		}
 		.header__lang-item {
-			padding: 9px 16px;
+			padding: 4px 16px;
 		}
 		.input__block,
 		.header__lang {

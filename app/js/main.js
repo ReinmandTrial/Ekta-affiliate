@@ -4,7 +4,7 @@ $(document).ready(function () {
       $('.burger').addClass('open');
       $('.burger').find('.burger__bg').fadeIn();
    });
-   $('.burger__close, .burger__bg').on('click', function () {
+   $('.burger__close, .burger__bg, .menu__link').on('click', function () {
       $('.burger').removeClass('open');
       $('.burger').find('.burger__bg').fadeOut();
    });
@@ -28,16 +28,28 @@ $(document).ready(function () {
       block.toggleClass('open').find('.js-select-body');
 
    });
+   $('.js-select-slow-head-icon').on('click', function () {
+      var btn = $(this);
+      var block = btn.closest('.js-select-slow');
+      if (block.hasClass('open')) {
+         block.removeClass('open').find('.js-select-slow-body').slideUp();
+      } else {
+         $('.js-select-slow').not(block).removeClass('open').find('.js-select-slow-body').slideUp();
+         block.find('.js-select-slow-body').slideDown();
+         block.addClass('open');
+      }
+
+   });
    $('.js-select-item').on('click', function () {
-      $(this).closest(".js-select").removeClass('open');
-      // $('.js-select').removeClass('open'); 
+      // $(this).closest(".js-select").removeClass('open');
+      $('.js-select').removeClass('open');
    });
    $('.js-select--swich .js-select-body .js-select-item').on('click', function () {
       btn = $(this);
       block = btn.closest('.js-select');
       thisText = btn.text();
 
-      block.toggleClass('open');
+      // block.toggleClass('open');
       block.find('.js-select-head p').text(thisText);
       block.find('.js-select-head input').val(thisText);
    });
@@ -86,4 +98,21 @@ $(document).ready(function () {
          $('.geography__map svg').addClass('done');
       }
    });
+
+   //плавная прокрутка якоря
+   const anchors = document.querySelectorAll('a[href*="#"]')
+
+   for (let anchor of anchors) {
+      anchor.addEventListener('click', function (e) {
+         e.preventDefault()
+
+         const blockID = anchor.getAttribute('href').substr(1)
+
+         document.getElementById(blockID).scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+         })
+      })
+   }
+
 });
