@@ -22,21 +22,24 @@ $(document).ready(function () {
    $('.js-select-head').on('click', function () {
       var btn = $(this);
       var block = btn.closest(".js-select");
-      if (block.hasClass('js-slide')) {
-
-
+      if (!block.hasClass('open')) {
+         $('.js-select').removeClass('open');
       }
-      else {
-         if (!block.hasClass('open')) {
-            $('.js-select').removeClass('open');
-         }
-         block.toggleClass('open').find('.js-select-body');
+      block.toggleClass('open').find('.js-select-body');
 
-      }
    });
    $('.js-select-item').on('click', function () {
       $(this).closest(".js-select").removeClass('open');
       // $('.js-select').removeClass('open'); 
+   });
+   $('.js-select--swich .js-select-body .js-select-item').on('click', function () {
+      btn = $(this);
+      block = btn.closest('.js-select');
+      thisText = btn.text();
+
+      block.toggleClass('open');
+      block.find('.js-select-head p').text(thisText);
+      block.find('.js-select-head input').val(thisText);
    });
 
 
