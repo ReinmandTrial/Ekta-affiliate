@@ -22,11 +22,17 @@ $(document).ready(function () {
    $('.js-select-head').on('click', function () {
       var btn = $(this);
       var block = btn.closest(".js-select");
-      if (!block.hasClass('open')) {
-         $('.js-select').removeClass('open');
-      } else {
+      if (block.hasClass('js-slide')) {
+
+
       }
-      block.toggleClass('open').find('.js-select-body');
+      else {
+         if (!block.hasClass('open')) {
+            $('.js-select').removeClass('open');
+         }
+         block.toggleClass('open').find('.js-select-body');
+
+      }
    });
    $('.js-select-item').on('click', function () {
       $(this).closest(".js-select").removeClass('open');
@@ -55,4 +61,26 @@ $(document).ready(function () {
    })
    //нажатие вне body
    //popup end
+
+   // карта
+   var parent = $("#shuffle");
+   var divs = parent.children();
+   while (divs.length) {
+      parent.append(divs.splice(Math.floor(Math.random() * divs.length), 1)[0]);
+   }
+   $(window).scroll(function () {
+      // alert(';')
+      var offset = $('#geography').offset(),
+         offsetIns = $('#insurance').offset();
+      if ($(this).scrollTop() > offset.top && $(this).scrollTop() < offsetIns.top && !$('.geography__map svg').hasClass('done')) {
+         // alert('l')
+         $('.geography__map svg path').each(function (index) {
+            var myPath = $(this);
+            setTimeout(function () {
+               myPath.attr('fill', 'url(#linear-gradient)');
+            }, index * 1);
+         });
+         $('.geography__map svg').addClass('done');
+      }
+   });
 });
