@@ -83,21 +83,23 @@ $(document).ready(function () {
    while (divs.length) {
       parent.append(divs.splice(Math.floor(Math.random() * divs.length), 1)[0]);
    }
-   $(window).scroll(function () {
-      // alert(';')
-      var offset = $('#geography').offset(),
-         offsetIns = $('#insurance').offset();
-      if ($(this).scrollTop() > offset.top && $(this).scrollTop() < offsetIns.top && !$('.geography__map svg').hasClass('done')) {
-         // alert('l')
-         $('.geography__map svg path').each(function (index) {
-            var myPath = $(this);
-            setTimeout(function () {
-               myPath.attr('fill', 'url(#linear-gradient)');
-            }, index * 1);
-         });
-         $('.geography__map svg').addClass('done');
-      }
-   });
+
+   function mapFill() {
+      $('.geography__map svg path').each(function (index) {
+         var myPath = $(this);
+         setTimeout(function () {
+            myPath.attr('fill', 'url(#linear-gradient)');
+         }, index * 1.5);
+      });
+
+   };
+
+   mapFill();
+
+   setInterval(function () {
+      $('.geography__map svg path').attr('fill', 'white');
+      mapFill();
+   }, 7000);
 
    //плавная прокрутка якоря
    const anchors = document.querySelectorAll('a[href*="#"]')

@@ -361,6 +361,7 @@
 		@include adaptiv("left", 0, -400);
 		@media (max-width: 575.98px) {
 			display: none;
+			animation: 3s ease-in infinite rocket;
 		}
 	}
 	&__bg-main--mobile {
@@ -369,7 +370,8 @@
 		right: 0px;
 		left: 0px;
 		bottom: -62px;
-		@extend %imgCover;
+		&__bg-template--mobile {
+		}
 		@media (min-width: 576px) {
 			display: none;
 		}
@@ -397,6 +399,241 @@
 		@media (min-width: 576px) {
 			display: none;
 		}
+	}
+	&__bg-main {
+		position: absolute;
+		z-index: 10;
+		right: -102px;
+		bottom: -30px;
+		@include adaptiv("left", -92, -400);
+		@media (max-width: 575.98px) {
+			display: none;
+		}
+	}
+	&__bg-man,
+	&__bg-money {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		width: 100%;
+	}
+	&__bg-template {
+		width: 100%;
+	}
+	&__bg-money1,
+	&__bg-money2,
+	&__bg-money3,
+	&__bg-money4,
+	&__bg-money5,
+	&__bg-money6,
+	&__bg-money7 {
+		position: absolute;
+	}
+	&__bg-money1 {
+		left: 0%;
+		bottom: 11%;
+		animation-duration: 1.8s;
+		animation: 1.8s ease-out 1 money1, 1s ease-in-out 1.8s infinite money-move;
+	}
+	&__bg-money2 {
+		left: 5%;
+		bottom: 4%;
+		animation: 1.9s ease-out 1 money2, 0.8s ease-in-out 1.9s infinite money-move;
+	}
+	&__bg-money3 {
+		left: 10%;
+		bottom: 13%;
+		animation: 2.1s ease-out 1 money3, 1.2s ease-in-out 2.1s infinite money-move;
+	}
+	&__bg-money4 {
+		left: 18%;
+		bottom: 4%;
+		animation: 2.2s ease-out 1 money4, 1.4s ease-in-out 2.2s infinite money-move;
+	}
+	&__bg-money5 {
+		left: 24%;
+		bottom: 19%;
+		animation: 2.4s ease-out 1 money5, 1.36s ease-in-out 2.4s infinite money-move;
+	}
+	&__bg-money6 {
+		left: 31%;
+		bottom: 3%;
+		animation: 2.6s ease-out 1 money6, 1.4s ease-in-out 2.6s infinite money-move;
+	}
+	&__bg-money7 {
+		left: 44%;
+		bottom: 17%;
+		animation: 2.7s ease-out 1 money7, 1.8s ease-in-out 2.7s infinite money-move;
+	}
+	&__bg-man {
+		animation: 3s ease-out 1 rocket;
+		z-index: 20;
+	}
+}
+@keyframes rocket {
+	0% {
+		transform: translate(-100%, 40%);
+	}
+	33% {
+		transform: translate(-100%, 40%);
+	}
+	100% {
+	}
+}
+@keyframes money-move {
+	0% {
+		transform: translateY(0%);
+	}
+	50% {
+		transform: translateY(-5%);
+	}
+	100% {
+		transform: translateY(0%);
+	}
+}
+@keyframes money1 {
+	0% {
+		transform: scale(0) rotate(180deg);
+	}
+	80% {
+		transform: scale(0) rotate(180deg);
+	}
+	100% {
+		// transform: scale(1);
+	}
+}
+@keyframes money2 {
+	0% {
+		transform: scale(0) rotate(120deg);
+	}
+	80% {
+		transform: scale(0) rotate(120deg);
+	}
+	100% {
+		// transform: scale(1);
+	}
+}
+@keyframes money3 {
+	0% {
+		transform: scale(0) rotate(-270deg);
+	}
+	80% {
+		transform: scale(0) rotate(-270deg);
+	}
+	100% {
+		// transform: scale(1);
+	}
+}
+@keyframes money4 {
+	0% {
+		transform: scale(0) rotate(100deg);
+	}
+	80% {
+		transform: scale(0) rotate(100deg);
+	}
+	100% {
+		// transform: scale(1);
+	}
+}
+@keyframes money5 {
+	0% {
+		transform: scale(0) rotate(-190deg);
+	}
+	80% {
+		transform: scale(0) rotate(-190deg);
+	}
+	100% {
+		// transform: scale(1);
+	}
+}
+@keyframes money6 {
+	0% {
+		transform: scale(0) rotate(229deg);
+	}
+	80% {
+		transform: scale(0) rotate(229deg);
+	}
+	100% {
+		// transform: scale(1);
+	}
+}
+@keyframes money7 {
+	0% {
+		transform: scale(0) rotate(-170deg);
+	}
+	90% {
+		transform: scale(0) rotate(-170deg);
+	}
+	100% {
+		// transform: scale(1);
+	}
+}
+.banner {
+	&__bg-template--mobile {
+	}
+	&__bg-man--mobile {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		animation: 2.8s ease-out 1 rocket--mobile;
+		z-index: 20;
+	}
+	&__bg-money1--mobile,
+	&__bg-money2--mobile,
+	&__bg-money3--mobile,
+	&__bg-money4--mobile,
+	&__bg-money5--mobile,
+	&__bg-money6--mobile,
+	&__bg-money7--mobile {
+		position: absolute;
+	}
+	&__bg-money1--mobile {
+		left: -1%;
+		bottom: 79%;
+		animation: 1.8s ease-out 1 money1, 1s ease-in-out 1.8s infinite money-move;
+	}
+
+	&__bg-money2--mobile {
+		// display: none;
+		left: 12%;
+		bottom: 79%;
+		animation: 1.9s ease-out 1 money2, 0.8s ease-in-out 1.9s infinite money-move;
+	}
+
+	&__bg-money3--mobile {
+		// display: none;
+		left: -4%;
+		bottom: 62%;
+		animation: 2.1s ease-out 1 money3, 1.2s ease-in-out 2.1s infinite money-move;
+	}
+
+	&__bg-money4--mobile {
+		// display: none;
+		left: 19%;
+		bottom: 55%;
+		animation: 2.2s ease-out 1 money4, 1.4s ease-in-out 2.2s infinite money-move;
+	}
+
+	&__bg-money5--mobile {
+		// display: none;
+		left: 1%;
+		bottom: 35%;
+		animation: 2.4s ease-out 1 money5, 1.36s ease-in-out 2.4s infinite money-move;
+	}
+}
+
+@keyframes rocket--mobile {
+	0% {
+		transform: translate(-100%, -60%);
+	}
+	33% {
+		transform: translate(-100%, -60%);
+	}
+	100% {
 	}
 }
 // banner end
