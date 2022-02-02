@@ -116,5 +116,22 @@ $(document).ready(function () {
          })
       })
    }
+   // sliders
+   new Swiper('.articles-slider', {
+      navigation: {
+         prevEl: '.articles-slider__btn-left',
+         nextEl: '.articles-slider__btn-right',
+      },
+      slidesPerView: 1,
+      spaceBetween: 45,
+   })
+   // sliders end
+
+   // if ($(window).width() < 992) {
+   //    console.log('width');
+   //    $($('body').find('.post__img')).each(function () {
+   //       $(this).closest('.post__section').find('.post__text').before($(this).closest('.post__section').find($(this)));
+   //    })
+   // }
 
 });
