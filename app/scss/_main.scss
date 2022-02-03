@@ -106,7 +106,7 @@
 	align-items: center;
 	padding: 30px 40px 40px 30px;
 	gap: 30px;
-	transition: 0.3s ease-out;
+	transition: box-shadow 0.3s ease-out;
 	@media (max-width: 991.98px) {
 		flex-direction: column;
 	}

@@ -918,10 +918,14 @@ textarea {
 .icon-triangle-down,
 .icon-burger,
 .icon-close {
-	background: -o-linear-gradient(2.91deg, #fff -11.72%, #787878 98.7%);
-	background: linear-gradient(87.09deg, #fff -11.72%, #787878 98.7%);
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
+	&::before {
+		background: -o-linear-gradient(2.91deg, #fff -11.72%, #787878 98.7%);
+		background: linear-gradient(87.09deg, #fff -11.72%, #787878 98.7%);
+		-webkit-background-clip: text;
+
+		-webkit-text-fill-color: transparent;
+		display: inline;
+	}
 }
 .banner {
 	position: relative;
